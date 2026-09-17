@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DigiMarkArts Solutions | Software Development, Digital Marketing & Staffing Solutions</title>
+  <meta name="description" content="High-impact Software Development, ROI-driven Digital Marketing, and on-demand Tech Staffing Solutions under one roof. Accelerate your digital growth today.">
+  <meta name="keywords" content="Software Development, Digital Marketing, Staffing Solutions, IT Staff Augmentation, Web Apps, Mobile Apps, SEO, Performance Marketing">
+  
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="DigiMarkArts Solutions | Code. Market. Scale.">
+  <meta property="og:description" content="Unified Software Development, Digital Marketing, and Staffing Solutions to scale modern businesses.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen antialiased selection:bg-blue-500 selection:text-white transition-colors duration-200">
+
+  <!-- =========================================================================
+       1. Top Header / Sticky Navigation
+       ========================================================================= -->
+  <header id="mainNav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-3 group focus:outline-none">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-500 to-cyan-400 flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:scale-105 transition-transform duration-200">
+            <i data-lucide="layers" class="w-5 h-5 text-white"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-heading font-extrabold text-xl tracking-tight text-white group-hover:text-blue-400 transition-colors">
+              DigiMarkArts<span class="text-blue-500">Solution LLP</span>
+            </span>
+            <span class="text-[10px] tracking-wider uppercase text-slate-400 font-semibold">Dev • Market • Staff</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-1 lg:space-x-1.5">
+          <a href="#services" class="desktop-nav-link px-3 py-2 rounded-lg text-xs lg:text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all">Services</a>
+          <a href="#why-us" class="desktop-nav-link px-3 py-2 rounded-lg text-xs lg:text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all">Why Us</a>
+          <a href="#case-studies" class="desktop-nav-link px-3 py-2 rounded-lg text-xs lg:text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all">Portfolios</a>
+          <a href="#testimonials" class="desktop-nav-link px-3 py-2 rounded-lg text-xs lg:text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all">Reviews</a>
+          <a href="#faq" class="desktop-nav-link px-3 py-2 rounded-lg text-xs lg:text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all">FAQ</a>
+        </nav>
+
+        <!-- Right Actions: Theme Toggle & Primary CTA -->
+        <div class="hidden md:flex items-center gap-3">
+          <button id="themeToggle" type="button" aria-label="Toggle Theme" class="p-2.5 rounded-xl bg-slate-800/60 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700/60 transition-all">
+            <i data-lucide="sun" class="w-4 h-4 theme-icon-sun hidden text-amber-400"></i>
+            <i data-lucide="moon" class="w-4 h-4 theme-icon-moon text-blue-400"></i>
+          </button>
+          
+          <a href="#contact" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-heading font-semibold text-sm text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 shadow-md shadow-blue-600/25 hover:shadow-blue-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all">
+            <span>Get a Quote</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex items-center gap-2 md:hidden">
+          <button id="themeToggleMobile" type="button" aria-label="Toggle Theme" class="p-2 rounded-lg bg-slate-800/80 text-slate-300 border border-slate-700">
+            <i data-lucide="sun" class="w-4 h-4 theme-icon-sun hidden text-amber-400"></i>
+            <i data-lucide="moon" class="w-4 h-4 theme-icon-moon text-blue-400"></i>
+          </button>
+          <button id="mobileMenuBtn" type="button" aria-expanded="false" aria-label="Toggle Navigation Menu" class="p-2 rounded-lg bg-slate-800/80 text-slate-300 hover:text-white border border-slate-700 focus:outline-none">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-b border-slate-800 bg-slate-900/95 backdrop-blur-xl px-4 pt-3 pb-6 space-y-3">
+      <div class="flex flex-col space-y-1">
+        <a href="#services" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Services</a>
+        <a href="#why-us" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Why Us</a>
+        <a href="#case-studies" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Portfolios</a>
+        <a href="#testimonials" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Reviews</a>
+        <a href="#faq" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">FAQ</a>
+      </div>
+      <div class="pt-2">
+        <a href="#contact" class="mobile-nav-link flex items-center justify-center gap-2 w-full py-3 rounded-xl font-heading font-semibold text-white bg-blue-600 hover:bg-blue-500 shadow-lg shadow-blue-600/30">
+          <span>Start a Project</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. Hero Section
+       ========================================================================= -->
+  <section id="hero" class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+    <!-- Ambient Background Glows -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] glow-spot-blue rounded-full pointer-events-none blur-3xl -z-10"></div>
+    <div class="absolute top-1/3 right-10 w-[400px] h-[300px] glow-spot-purple rounded-full pointer-events-none blur-3xl -z-10"></div>
+    <div class="absolute bottom-10 left-10 w-[400px] h-[300px] glow-spot-cyan rounded-full pointer-events-none blur-3xl -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto">
+        
+        <!-- Live Status Pill -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/80 border border-slate-700/80 text-xs font-medium text-slate-300 mb-6 shadow-sm backdrop-blur-md">
+          <span class="flex h-2 w-2 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          <span class="text-slate-300">Unified Growth Engine for High-Growth Companies</span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.15] text-white mb-6">
+          Architect Software. <br class="hidden sm:inline">
+          <span class="gradient-text-blue">Ignite Growth.</span> <br class="hidden sm:inline">
+          <span class="gradient-text-purple">Scale Top Talent.</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-base sm:text-lg lg:text-xl text-slate-300 mb-10 leading-relaxed font-normal">
+          We combine cutting-edge <strong class="text-white font-medium">Software Engineering</strong>, ROI-driven <strong class="text-white font-medium">Digital Marketing</strong>, and on-demand <strong class="text-white font-medium">Tech Staffing</strong> into one synchronized powerhouse.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+          <a href="#services" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl font-heading font-semibold text-base text-white bg-blue-600 hover:bg-blue-500 shadow-xl shadow-blue-600/30 hover:scale-[1.02] active:scale-[0.98] transition-all">
+            <i data-lucide="sparkles" class="w-5 h-5 text-blue-200"></i>
+            <span>Explore 3 Pillars</span>
+          </a>
+
+    
+        </div>
+
+        <!-- 3 Core Highlight Badges -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+          <div class="glass-card p-4 rounded-2xl flex items-center gap-3.5">
+            <div class="p-2.5 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20">
+              <i data-lucide="code-2" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-heading font-semibold text-sm text-white">Software Dev</h4>
+              <p class="text-xs text-slate-400">Full-Stack, Cloud & Mobile</p>
+            </div>
+          </div>
+
+          <div class="glass-card p-4 rounded-2xl flex items-center gap-3.5">
+            <div class="p-2.5 rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20">
+              <i data-lucide="trending-up" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-heading font-semibold text-sm text-white">Digital Marketing</h4>
+              <p class="text-xs text-slate-400">SEO, PPC & Inbound Funnels</p>
+            </div>
+          </div>
+
+          <div class="glass-card p-4 rounded-2xl flex items-center gap-3.5">
+            <div class="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+              <i data-lucide="users-2" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-heading font-semibold text-sm text-white">Staffing Solutions</h4>
+              <p class="text-xs text-slate-400">Top 3% Vetted Engineers</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. Metrics / Stat Counter Strip
+       ========================================================================= -->
+  <section id="stats" class="py-12 border-y border-slate-800 bg-slate-900/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        
+        <div class="p-4">
+          <div class="font-heading font-extrabold text-3xl sm:text-4xl text-blue-400 mb-1 stat-counter" data-target="280" data-suffix="+">280+</div>
+          <div class="text-xs sm:text-sm text-slate-400 font-medium">Projects Delivered</div>
+        </div>
+
+        <div class="p-4">
+          <div class="font-heading font-extrabold text-3xl sm:text-4xl text-purple-400 mb-1 stat-counter" data-target="98" data-suffix="%">98%</div>
+          <div class="text-xs sm:text-sm text-slate-400 font-medium">Client Retention Rate</div>
+        </div>
+
+        <div class="p-4">
+          <div class="font-heading font-extrabold text-3xl sm:text-4xl text-emerald-400 mb-1 stat-counter" data-target="150" data-suffix="+">150+</div>
+          <div class="text-xs sm:text-sm text-slate-400 font-medium">Tech Talents Placed</div>
+        </div>
+
+        <div class="p-4">
+          <div class="font-heading font-extrabold text-3xl sm:text-4xl text-cyan-400 mb-1 stat-counter" data-target="45" data-suffix="M+">45M+</div>
+          <div class="text-xs sm:text-sm text-slate-400 font-medium">Ad Revenue Driven ($)</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. Comprehensive Services Showcase (3 Pillars)
+       ========================================================================= -->
+  <section id="services" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">Our Core Capabilities</h2>
+        <h3 class="font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-4">
+          Three Engines. One Unified Partner.
+        </h3>
+        <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+          Whether you need a custom enterprise platform built from scratch, customer acquisition on autopilot, or specialized engineers to scale your roadmap, we deliver results.
+        </p>
+
+        <!-- Category Filter Tabs -->
+        <div class="inline-flex flex-wrap justify-center gap-2 p-1.5 rounded-2xl bg-slate-900/90 border border-slate-800 mt-8">
+          <button type="button" data-category="all" class="service-tab-btn active-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-blue-600 text-white">
+            All Services
+          </button>
+          <button type="button" data-category="dev" class="service-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-800/80 text-slate-300 hover:text-white">
+            💻 Software Development
+          </button>
+          <button type="button" data-category="marketing" class="service-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-800/80 text-slate-300 hover:text-white">
+            📈 Digital Marketing
+          </button>
+          <button type="button" data-category="staffing" class="service-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-800/80 text-slate-300 hover:text-white">
+            👥 Staffing Solutions
+          </button>
+        </div>
+      </div>
+
+      <!-- Services Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        
+        <!-- CARD 1: Full-Stack Web & Mobile Apps (Dev) -->
+        <div class="service-card-item glass-card rounded-3xl p-7 flex flex-col justify-between transition-card" data-category="dev">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-400 flex items-center justify-center mb-6 border border-blue-500/20">
+              <i data-lucide="laptop" class="w-6 h-6"></i>
+            </div>
+            <div class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-blue-500/10 text-blue-400 mb-2">Software Development</div>
+            <h4 class="font-heading font-bold text-xl text-white mb-3">Custom Web & Mobile Apps</h4>
+            <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+              End-to-end architecture and engineering for modern SPAs, SaaS platforms, native iOS/Android, and progressive web apps built for performance and scalability.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-300 mb-8">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-400 shrink-0"></i> React, Next.js, Vue, Node.js, Python</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-400 shrink-0"></i> Cross-platform Flutter & React Native</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-400 shrink-0"></i> Clean REST & GraphQL API Design</li>
+            </ul>
+          </div>
+          <button type="button" data-service-name="Custom Web & Mobile Apps" data-service-type="software" class="inquire-service-btn w-full py-2.5 rounded-xl bg-slate-800 hover:bg-blue-600 hover:text-white text-slate-200 text-xs font-semibold flex items-center justify-center gap-2 transition-all">
+            <span>Request App Proposal</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- CARD 2: Cloud, DevOps & AI (Dev) -->
+        <div class="service-card-item glass-card rounded-3xl p-7 flex flex-col justify-between transition-card" data-category="dev">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-blue-500/10 text-cyan-400 flex items-center justify-center mb-6 border border-cyan-500/20">
+              <i data-lucide="cloud-cog" class="w-6 h-6"></i>
+            </div>
+            <div class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-blue-500/10 text-blue-400 mb-2">Software Development</div>
+            <h4 class="font-heading font-bold text-xl text-white mb-3">Cloud, DevOps & AI Solutions</h4>
+            <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+              Accelerate release cycles with automated CI/CD, Kubernetes container orchestration, secure AWS/Azure/GCP cloud environments, and generative AI integrations.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-300 mb-8">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-400 shrink-0"></i> AWS, GCP & Azure Architecture</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-400 shrink-0"></i> Docker, Kubernetes & Terraform</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-400 shrink-0"></i> LLM & Custom AI Pipeline Integration</li>
+            </ul>
+          </div>
+          <button type="button" data-service-name="Cloud & AI Solutions" data-service-type="software" class="inquire-service-btn w-full py-2.5 rounded-xl bg-slate-800 hover:bg-blue-600 hover:text-white text-slate-200 text-xs font-semibold flex items-center justify-center gap-2 transition-all">
+            <span>Inquire About Cloud / AI</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- CARD 3: SEO & Inbound Engine (Marketing) -->
+        <div class="service-card-item glass-card rounded-3xl p-7 flex flex-col justify-between transition-card" data-category="marketing">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-6 border border-purple-500/20">
+              <i data-lucide="search" class="w-6 h-6"></i>
+            </div>
+            <div class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-purple-500/10 text-purple-400 mb-2">Digital Marketing</div>
+            <h4 class="font-heading font-bold text-xl text-white mb-3">SEO & Inbound Growth</h4>
+            <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+              Dominate organic search with technical SEO audits, programmatic keyword strategies, high-authority content engines, and high-intent backlink acquisition.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-300 mb-8">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400 shrink-0"></i> Technical & Core Web Vitals Audits</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400 shrink-0"></i> High-Intent Topic Authority Clusters</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400 shrink-0"></i> Data-Backed Conversion Copywriting</li>
+            </ul>
+          </div>
+          <button type="button" data-service-name="SEO & Inbound Growth" data-service-type="marketing" class="inquire-service-btn w-full py-2.5 rounded-xl bg-slate-800 hover:bg-purple-600 hover:text-white text-slate-200 text-xs font-semibold flex items-center justify-center gap-2 transition-all">
+            <span>Request SEO Audit</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- CARD 4: Paid Ads & Performance Marketing (Marketing) -->
+        <div class="service-card-item glass-card rounded-3xl p-7 flex flex-col justify-between transition-card" data-category="marketing">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-purple-500/10 text-pink-400 flex items-center justify-center mb-6 border border-pink-500/20">
+              <i data-lucide="target" class="w-6 h-6"></i>
+            </div>
+            <div class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-purple-500/10 text-purple-400 mb-2">Digital Marketing</div>
+            <h4 class="font-heading font-bold text-xl text-white mb-3">Paid Media & Performance PPC</h4>
+            <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+              Targeted customer acquisition campaigns across Google Search, LinkedIn B2B, Meta, and Programmatic Display optimized for maximum ROAS and lower CAC.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-300 mb-8">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400 shrink-0"></i> Google Ads, Meta & LinkedIn Ad Funnels</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400 shrink-0"></i> A/B Creative Testing & Retargeting</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400 shrink-0"></i> Conversion Rate Optimization (CRO)</li>
+            </ul>
+          </div>
+          <button type="button" data-service-name="Paid Ads & PPC" data-service-type="marketing" class="inquire-service-btn w-full py-2.5 rounded-xl bg-slate-800 hover:bg-purple-600 hover:text-white text-slate-200 text-xs font-semibold flex items-center justify-center gap-2 transition-all">
+            <span>Inquire About PPC Ads</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- CARD 5: Dedicated Tech Teams (Staffing) -->
+        <div class="service-card-item glass-card rounded-3xl p-7 flex flex-col justify-between transition-card" data-category="staffing">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-6 border border-emerald-500/20">
+              <i data-lucide="user-check" class="w-6 h-6"></i>
+            </div>
+            <div class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 mb-2">Staffing Solutions</div>
+            <h4 class="font-heading font-bold text-xl text-white mb-3">Dedicated Engineering Squads</h4>
+            <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+              Pre-vetted, full-time dedicated engineering pods that integrate seamlessly with your in-house product leads. Fully managed with zero recruitment headache.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-300 mb-8">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0"></i> Senior Frontend, Backend & Full-Stack</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0"></i> Timezone-Aligned Collaboration</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0"></i> 48-Hour Talent Replacement Guarantee</li>
+            </ul>
+          </div>
+          <button type="button" data-service-name="Dedicated Engineering Squads" data-service-type="staffing" class="inquire-service-btn w-full py-2.5 rounded-xl bg-slate-800 hover:bg-emerald-600 hover:text-white text-slate-200 text-xs font-semibold flex items-center justify-center gap-2 transition-all">
+            <span>Hire Dedicated Team</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- CARD 6: Direct Hire & Executive Search (Staffing) -->
+        <div class="service-card-item glass-card rounded-3xl p-7 flex flex-col justify-between transition-card" data-category="staffing">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-teal-400 flex items-center justify-center mb-6 border border-teal-500/20">
+              <i data-lucide="briefcase" class="w-6 h-6"></i>
+            </div>
+            <div class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 mb-2">Staffing Solutions</div>
+            <h4 class="font-heading font-bold text-xl text-white mb-3">Direct Placement & Executive Search</h4>
+            <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+              Find and hire critical leadership and niche technical experts for permanent in-house positions through our rigorous multi-stage vetting process.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-300 mb-8">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0"></i> CTO, VP Engineering & Tech Leads</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0"></i> Technical Rigor & Soft-Skills Vetting</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0"></i> 90-Day Placement Retention Guarantee</li>
+            </ul>
+          </div>
+          <button type="button" data-service-name="Direct Placement & Search" data-service-type="staffing" class="inquire-service-btn w-full py-2.5 rounded-xl bg-slate-800 hover:bg-emerald-600 hover:text-white text-slate-200 text-xs font-semibold flex items-center justify-center gap-2 transition-all">
+            <span>Inquire About Hiring</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. Why Choose Us / Key Differentiators
+       ========================================================================= -->
+  <section id="why-us" class="py-24 relative bg-slate-900/40 border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">The DigiMarkArts Advantage</h2>
+        <h3 class="font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-4">
+          Why Modern Enterprises Choose Us
+        </h3>
+        <p class="text-slate-400 text-sm sm:text-base">
+          No silos between your developers, marketers, and recruiting teams. We work as an integrated unit to deliver measurable impact.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="glass-card p-6 rounded-2xl transition-card">
+          <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center mb-4 border border-blue-500/20">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-heading font-bold text-base text-white mb-2">Top 3% Vetted Talent</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Every software engineer and digital marketer undergoes rigorous coding tests, communication screening, and system design evaluations.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl transition-card">
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-4 border border-indigo-500/20">
+            <i data-lucide="zap" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-heading font-bold text-base text-white mb-2">Agile 2-Week Sprints</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Continuous delivery with transparent roadmap updates, weekly demo recordings, and active Jira/Slack collaboration channels.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl transition-card">
+          <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-4 border border-purple-500/20">
+            <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-heading font-bold text-base text-white mb-2">Measurable ROI Focus</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Every line of code and marketing dollar is tied directly to customer acquisition, retention, and bottom-line revenue metrics.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl transition-card">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4 border border-emerald-500/20">
+            <i data-lucide="repeat" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-heading font-bold text-base text-white mb-2">Zero Lock-in & Ownership</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            You own 100% of your source code, marketing accounts, tracking pixels, and intellectual property from day one with strict NDA coverage.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. Portfolios (Formerly Results / Case Studies)
+       ========================================================================= -->
+  <section id="case-studies" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">Portfolios & Case Studies</h2>
+          <h3 class="font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
+            Featured Client Work & Portfolios
+          </h3>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap gap-2">
+          <button type="button" data-filter="all" class="case-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-700 text-white border border-blue-500 transition-all">
+            All Portfolios
+          </button>
+          <button type="button" data-filter="dev" class="case-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-800/60 text-slate-400 hover:text-white border border-transparent transition-all">
+            Software Dev
+          </button>
+          <button type="button" data-filter="marketing" class="case-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-800/60 text-slate-400 hover:text-white border border-transparent transition-all">
+            Marketing
+          </button>
+          <button type="button" data-filter="staffing" class="case-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-800/60 text-slate-400 hover:text-white border border-transparent transition-all">
+            Staffing
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        
+        <!-- Case 1: Software -->
+        <div class="case-card-item glass-card rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-card" data-case-type="dev">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-blue-500/10 text-blue-400 border border-blue-500/20">FinTech SaaS</span>
+              <span class="text-xs text-slate-400">4 Month Build</span>
+            </div>
+            <h4 class="font-heading font-bold text-lg text-white mb-2">High-Frequency Trading & Analytics Portal</h4>
+            <p class="text-xs text-slate-400 mb-6 leading-relaxed">
+              Architected a low-latency real-time dashboard processing 2M+ transactions daily with sub-50ms data streaming using WebSockets and Next.js.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800/80">
+            <div class="text-xl font-heading font-extrabold text-blue-400">99.99%</div>
+            <div class="text-[11px] text-slate-400">Uptime & 60% Faster Load Speed</div>
+          </div>
+        </div>
+
+        <!-- Case 2: Marketing -->
+        <div class="case-card-item glass-card rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-card" data-case-type="marketing">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-purple-500/10 text-purple-400 border border-purple-500/20">HealthTech App</span>
+              <span class="text-xs text-slate-400">6 Month Campaign</span>
+            </div>
+            <h4 class="font-heading font-bold text-lg text-white mb-2">Full-Funnel Organic & Paid Acquisition</h4>
+            <p class="text-xs text-slate-400 mb-6 leading-relaxed">
+              Restructured Google Ads and deployed high-intent SEO content hubs that skyrocketed qualified demo requests while slashing CPA by 42%.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800/80">
+            <div class="text-xl font-heading font-extrabold text-purple-400">+340%</div>
+            <div class="text-[11px] text-slate-400">Inbound Pipeline Growth</div>
+          </div>
+        </div>
+
+        <!-- Case 3: Staffing -->
+        <div class="case-card-item glass-card rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-card" data-case-type="staffing">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Series B E-Commerce</span>
+              <span class="text-xs text-slate-400">14-Day Placement</span>
+            </div>
+            <h4 class="font-heading font-bold text-lg text-white mb-2">Rapid 8-Engineer Pod Augmentation</h4>
+            <p class="text-xs text-slate-400 mb-6 leading-relaxed">
+              Sourced, vetted, and onboarded 8 senior full-stack React/Node engineers within 2 weeks to hit an aggressive Black Friday platform deadline.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800/80">
+            <div class="text-xl font-heading font-extrabold text-emerald-400">100%</div>
+            <div class="text-[11px] text-slate-400">On-Time Sprint Completion</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       9. Client Reviews & Testimonials
+       ========================================================================= -->
+  <section id="testimonials" class="py-24 bg-slate-900/40 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">Client Feedback</h2>
+        <h3 class="font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-4">
+          Trusted by Founders & Engineering Leaders
+        </h3>
+        <p class="text-slate-400 text-sm">
+          Hear how our cross-functional team has accelerated roadmaps across startups and enterprises alike.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        
+        <!-- Review 1 -->
+        <div class="glass-card rounded-3xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-400 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-sm text-slate-300 leading-relaxed mb-6 italic">
+              "DigiMarkArts delivered our web application 3 weeks ahead of schedule. Their code quality, communication, and adherence to clean architecture was simply world-class."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+            <div class="w-10 h-10 rounded-full bg-blue-600/30 text-blue-400 font-bold flex items-center justify-center text-sm border border-blue-500/30">
+              MR
+            </div>
+            <div>
+              <div class="font-heading font-semibold text-sm text-white">Venkata Rao K</div>
+              <div class="text-xs text-slate-400">Rajya Lakshmi Medicals</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="glass-card rounded-3xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-400 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-sm text-slate-300 leading-relaxed mb-6 italic">
+              "Their digital marketing team completely turned around our customer acquisition. In 4 months, our organic inbound leads tripled and our cost-per-lead dropped significantly."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+            <div class="w-10 h-10 rounded-full bg-purple-600/30 text-purple-400 font-bold flex items-center justify-center text-sm border border-purple-500/30">
+              SL
+            </div>
+            <div>
+              <div class="font-heading font-semibold text-sm text-white">Subba Rao Ayila</div>
+              <div class="text-xs text-slate-400">Director of RajyaLakshmi Home Care</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="glass-card rounded-3xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-400 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-sm text-slate-300 leading-relaxed mb-6 italic">
+              "Finding vetted senior DevOps engineers was taking us months. DigiMarkArts supplied 3 exceptional engineers within 10 days who integrated directly into our daily standups."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+            <div class="w-10 h-10 rounded-full bg-emerald-600/30 text-emerald-400 font-bold flex items-center justify-center text-sm border border-emerald-500/30">
+              DK
+            </div>
+            <div>
+              <div class="font-heading font-semibold text-sm text-white">David Keller</div>
+              <div class="text-xs text-slate-400">Head of Engineering, ScaleCloud</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       10. Frequently Asked Questions (FAQ) Accordion
+       ========================================================================= -->
+  <section id="faq" class="py-20 relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-14">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">Got Questions?</h2>
+        <h3 class="font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
+          Frequently Asked Questions
+        </h3>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item glass-card rounded-2xl border border-slate-800/90 overflow-hidden">
+          <button type="button" class="faq-header w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-heading font-semibold text-base text-white">How quickly can you kick off a Software or Staffing project?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-content hidden px-5 sm:px-6 pb-6 text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-4">
+            For dedicated staffing augmentation, we can present pre-vetted senior candidates within 48 to 72 hours. For software development projects, discovery and architecture sprints typically kick off within 1 week of agreement signing.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item glass-card rounded-2xl border border-slate-800/90 overflow-hidden">
+          <button type="button" class="faq-header w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-heading font-semibold text-base text-white">Can we bundle Software Development with Digital Marketing?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-content hidden px-5 sm:px-6 pb-6 text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-4">
+            Yes, this is one of our biggest competitive strengths! When we engineer your web or mobile app, our marketing and SEO specialists are involved from day one to ensure optimal conversion funnels, tracking pixels, speed optimization, and landing page architecture.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item glass-card rounded-2xl border border-slate-800/90 overflow-hidden">
+          <button type="button" class="faq-header w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-heading font-semibold text-base text-white">What are your engagement and billing models?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-content hidden px-5 sm:px-6 pb-6 text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-4">
+            We offer flexible engagement options: Milestone-based Fixed Scope (ideal for MVPs and defined roadmaps), Dedicated Monthly Pods (ideal for ongoing product development), and Performance-based Retainers (for Growth & Digital Marketing).
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item glass-card rounded-2xl border border-slate-800/90 overflow-hidden">
+          <button type="button" class="faq-header w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-heading font-semibold text-base text-white">Do you sign Non-Disclosure Agreements (NDAs) and IP assignment?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-content hidden px-5 sm:px-6 pb-6 text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-4">
+            Absolutely. We sign comprehensive mutual NDAs prior to any technical discovery, and your contract explicitly grants you 100% exclusive intellectual property ownership of all source code, assets, and deliverables.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       11. Consultation & Contact Lead Capture Form
+       ========================================================================= -->
+  <section id="contact" class="py-24 relative bg-slate-900/50 border-t border-slate-800">
+    <!-- Background glow -->
+    <div class="absolute bottom-10 right-1/4 w-[500px] h-[350px] glow-spot-blue rounded-full pointer-events-none blur-3xl -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left Column: Value Proposition & Direct Contact Info -->
+        <div class="lg:col-span-5 space-y-8">
+          <div>
+            <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">Let's Build Together</h2>
+            <h3 class="font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-4">
+              Ready to Accelerate Your Business?
+            </h3>
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+              Schedule a confidential discovery session. Our technical directors and growth leads will review your requirements and provide a tailored roadmap within 24 hours.
+            </p>
+          </div>
+
+          <!-- Direct Info Cards -->
+          <div class="space-y-4">
+            <div class="flex items-center gap-4 p-4 rounded-2xl glass-card">
+              <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0 border border-blue-500/20">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400">Direct Inquiries</div>
+                <a href="mailto:hr@digimarkarts.com" class="text-sm font-semibold text-white hover:text-blue-400 transition-colors">hr@digimarkarts.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 p-4 rounded-2xl glass-card">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/20">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400">Direct Phone</div>
+                <a href="tel: 040 35 75 11 22" class="text-sm font-semibold text-white hover:text-emerald-400 transition-colors">040 35 75 11 22</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 p-4 rounded-2xl glass-card">
+              <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0 border border-purple-500/20">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400">Guaranteed Response</div>
+                <div class="text-sm font-semibold text-white">Within 24 Business Hours</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Interactive RFP / Lead Form -->
+        <div class="lg:col-span-7 glass-card rounded-3xl p-6 sm:p-10 border border-slate-700/80 shadow-2xl">
+          <form id="agencyContactForm" class="space-y-6">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="contactName" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Your Name *</label>
+                <input id="contactName" type="text" required placeholder="Alex Morgan" class="input-themed w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-slate-100 text-sm focus:outline-none focus:border-blue-500 transition-colors">
+              </div>
+              <div>
+                <label for="contactEmail" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Work Email *</label>
+                <input id="contactEmail" type="email" required placeholder="alex@company.com" class="input-themed w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-slate-100 text-sm focus:outline-none focus:border-blue-500 transition-colors">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="contactCompany" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Company Name</label>
+                <input id="contactCompany" type="text" placeholder="Acme Technologies" class="input-themed w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-slate-100 text-sm focus:outline-none focus:border-blue-500 transition-colors">
+              </div>
+              <div>
+                <label for="contactBudget" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Estimated Budget</label>
+                <select id="contactBudget" class="input-themed w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-slate-100 text-sm focus:outline-none focus:border-blue-500 transition-colors">
+                  <option value="5k - 15k">5,000 - 15,000</option>
+                  <option value="15k - 30k" selected>15,000 - 30,000</option>
+                  <option value="30k - 60k">30,000 - 60,000</option>
+                  <option value="60k+">60,000+</option>
+                  <option value="Flexible / Retainer">Flexible / Ongoing Retainer</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Service Multi-Select Checkboxes -->
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2.5">Interested Capabilities (Check all that apply)</label>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <label class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-900/80 border border-slate-700/80 cursor-pointer hover:border-blue-500/60 transition-colors">
+                  <input type="checkbox" id="service-software" class="w-4 h-4 text-blue-600 rounded bg-slate-800 border-slate-600 focus:ring-blue-500">
+                  <span class="text-xs font-medium text-slate-200">Software Dev</span>
+                </label>
+                <label class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-900/80 border border-slate-700/80 cursor-pointer hover:border-purple-500/60 transition-colors">
+                  <input type="checkbox" id="service-marketing" class="w-4 h-4 text-purple-600 rounded bg-slate-800 border-slate-600 focus:ring-purple-500">
+                  <span class="text-xs font-medium text-slate-200">Digital Marketing</span>
+                </label>
+                <label class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-900/80 border border-slate-700/80 cursor-pointer hover:border-emerald-500/60 transition-colors">
+                  <input type="checkbox" id="service-staffing" class="w-4 h-4 text-emerald-600 rounded bg-slate-800 border-slate-600 focus:ring-emerald-500">
+                  <span class="text-xs font-medium text-slate-200">Staffing Solutions</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Message Area -->
+            <div>
+              <label for="contactMessage" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Project Brief / Details *</label>
+              <textarea id="contactMessage" rows="4" required placeholder="Tell us about your project goals, tech stack preferences, timeline, or open hiring requirements..." class="input-themed w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-slate-100 text-sm focus:outline-none focus:border-blue-500 transition-colors"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="contactSubmitBtn" class="w-full py-3.5 rounded-xl font-heading font-semibold text-base text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 shadow-xl shadow-blue-600/30 flex items-center justify-center gap-2 transition-all hover:scale-[1.01] active:scale-[0.99]">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span id="contactSubmitBtnLabel">Send Project Inquiry</span>
+            </button>
+
+            <p id="contactFormError" class="hidden text-[12px] text-center text-red-400"></p>
+
+            <p class="text-[11px] text-center text-slate-400">
+              🔒 100% Confidential. Protected by strict mutual Non-Disclosure Agreement.
+            </p>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       12. Submission Confirmation Modal (Client-side feedback)
+       ========================================================================= -->
+  <div id="successModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/80 backdrop-blur-md p-4">
+    <div class="glass-card max-w-md w-full p-6 sm:p-8 rounded-3xl border border-blue-500/30 shadow-2xl text-center animate-float">
+      <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-5 border border-emerald-500/30">
+        <i data-lucide="check-circle" class="w-7 h-7"></i>
+      </div>
+      <h3 class="font-heading font-extrabold text-2xl text-white mb-2">Inquiry Received!</h3>
+      <p class="text-xs sm:text-sm text-slate-300 mb-5">
+        Thank you for reaching out. Our engineering & growth directors will review your brief and send a proposal within 24 hours.
+      </p>
+      
+      <!-- Lead Summary container -->
+      <div id="modalLeadSummary" class="mb-6"></div>
+
+      <button id="closeModalBtn" type="button" class="w-full py-3 rounded-xl font-heading font-semibold text-sm text-white bg-blue-600 hover:bg-blue-500 transition-all">
+        Back to Website
+      </button>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       13. Footer
+       ========================================================================= -->
+  <footer class="border-t border-slate-800/90 bg-slate-950 py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        
+        <div class="md:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center text-white">
+              <i data-lucide="layers" class="w-5 h-5"></i>
+            </div>
+            <span class="font-heading font-extrabold text-xl text-white">DigiMarkArts <span class="text-blue-500">Solutions</span></span>
+          </div>
+          <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+            The next-generation partner for high-growth tech ventures, scale-ups, and established enterprises. Software development, performance marketing, and talent staffing.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-bold text-xs uppercase tracking-wider text-slate-300 mb-3">Our Solutions</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#services" class="hover:text-blue-400 transition-colors">Custom Software Development</a></li>
+            <li><a href="#services" class="hover:text-blue-400 transition-colors">Cloud & AI Engineering</a></li>
+            <li><a href="#services" class="hover:text-blue-400 transition-colors">Technical SEO & Inbound</a></li>
+            <li><a href="#services" class="hover:text-blue-400 transition-colors">Paid Ads (PPC & Social)</a></li>
+            <li><a href="#services" class="hover:text-blue-400 transition-colors">Tech Staff Augmentation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-bold text-xs uppercase tracking-wider text-slate-300 mb-3">Quick Navigation</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#case-studies" class="hover:text-blue-400 transition-colors">Portfolios</a></li>
+            <li><a href="#rajyalakshmi-medicals" class="hover:text-blue-400 transition-colors">RajyaLakshmi Medicals</a></li>
+            <li><a href="#homecare-products" class="hover:text-blue-400 transition-colors">Home Care Products</a></li>
+            <li><a href="#why-us" class="hover:text-blue-400 transition-colors">Why Choose Us</a></li>
+            <li><a href="#contact" class="hover:text-blue-400 transition-colors">Request Consultation</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-800/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div>
+          © <span id="currentYear">2026</span> DigiMarkArts Solutions Inc. All rights reserved.
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-slate-300">Privacy Policy</a>
+          <a href="#" class="hover:text-slate-300">Terms of Service</a>
+          <a href="#" class="hover:text-slate-300">Security & NDA</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="js/main.js"></script>
+
+  <!-- =========================================================================
+       14. Contact Form Submission -> Formspree
+       ========================================================================= -->
+  <script>
+    (function () {
+      var FORMSPREE_ENDPOINT = "https://formspree.io/f/mnpnqjzj";
+
+      var form = document.getElementById("agencyContactForm");
+      if (!form) return;
+
+      var submitBtn = document.getElementById("contactSubmitBtn");
+      var submitBtnLabel = document.getElementById("contactSubmitBtnLabel");
+      var errorMsg = document.getElementById("contactFormError");
+      var successModal = document.getElementById("successModal");
+      var modalLeadSummary = document.getElementById("modalLeadSummary");
+      var closeModalBtn = document.getElementById("closeModalBtn");
+
+      function showError(text) {
+        errorMsg.textContent = text;
+        errorMsg.classList.remove("hidden");
+      }
+
+      function hideError() {
+        errorMsg.classList.add("hidden");
+        errorMsg.textContent = "";
+      }
+
+      function openModal(summaryHtml) {
+        if (modalLeadSummary) modalLeadSummary.innerHTML = summaryHtml;
+        if (successModal) {
+          successModal.classList.remove("hidden");
+          successModal.classList.add("flex");
+        }
+      }
+
+      function closeModal() {
+        if (successModal) {
+          successModal.classList.add("hidden");
+          successModal.classList.remove("flex");
+        }
+      }
+
+      if (closeModalBtn) {
+        closeModalBtn.addEventListener("click", closeModal);
+      }
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        hideError();
+
+        var name = document.getElementById("contactName").value.trim();
+        var email = document.getElementById("contactEmail").value.trim();
+        var company = document.getElementById("contactCompany").value.trim();
+        var budget = document.getElementById("contactBudget").value;
+        var message = document.getElementById("contactMessage").value.trim();
+
+        var capabilities = [];
+        if (document.getElementById("service-software").checked) capabilities.push("Software Dev");
+        if (document.getElementById("service-marketing").checked) capabilities.push("Digital Marketing");
+        if (document.getElementById("service-staffing").checked) capabilities.push("Staffing Solutions");
+
+        if (!name || !email || !message) {
+          showError("Please fill in your name, work email, and project brief.");
+          return;
+        }
+
+        var payload = {
+          name: name,
+          email: email,
+          company: company,
+          budget: budget,
+          capabilities: capabilities.join(", ") || "None selected",
+          message: message
+        };
+
+        submitBtn.disabled = true;
+        var originalLabel = submitBtnLabel.textContent;
+        submitBtnLabel.textContent = "Sending...";
+
+        try {
+          var response = await fetch(FORMSPREE_ENDPOINT, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Accept": "application/json"
+            },
+            body: JSON.stringify(payload)
+          });
+
+          if (response.ok) {
+            var summaryHtml =
+              '<div class="text-left text-xs text-slate-300 bg-slate-900/70 border border-slate-800 rounded-xl p-4 space-y-1">' +
+              '<div><span class="text-slate-500">Name:</span> ' + name + '</div>' +
+              '<div><span class="text-slate-500">Email:</span> ' + email + '</div>' +
+              (company ? '<div><span class="text-slate-500">Company:</span> ' + company + '</div>' : '') +
+              '<div><span class="text-slate-500">Budget:</span> ' + budget + '</div>' +
+              '<div><span class="text-slate-500">Interested in:</span> ' + (capabilities.join(", ") || "Not specified") + '</div>' +
+              '</div>';
+
+            openModal(summaryHtml);
+            form.reset();
+          } else {
+            var data = await response.json().catch(function () { return null; });
+            var errText = (data && data.errors && data.errors.length)
+              ? data.errors.map(function (x) { return x.message; }).join(", ")
+              : "Something went wrong sending your inquiry. Please try again or email us directly.";
+            showError(errText);
+          }
+        } catch (err) {
+          showError("Network error. Please check your connection and try again.");
+        } finally {
+          submitBtn.disabled = false;
+          submitBtnLabel.textContent = originalLabel;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
